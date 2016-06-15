@@ -3,7 +3,7 @@ module Api
     class ArtistsController < ApplicationController
 
       def index
-        render json: Artist.all
+        render json: Artist.all, include: ['events']
       end
 
     end
