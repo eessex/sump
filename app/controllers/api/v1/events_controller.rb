@@ -7,7 +7,8 @@ module Api
       end
 
       def create
-        event = Event.create(event_params)
+        binding.pry
+        event =  Event.create!(event_params)
         render json: event
       end
 
@@ -19,7 +20,7 @@ module Api
 
       private
       def event_params
-        params.require(:data).require(:attributes).permit(:name, :date, :price, :description, :url, :image)
+        ActiveModelSerializers::Deserialization.jsonapi_parse(params)
       end
     end
   end
