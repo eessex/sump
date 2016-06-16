@@ -6,6 +6,15 @@ module Api
         render json: Artist.all, include: ['events']
       end
 
+      def create
+      end
+
+      def update
+      end
+
+      def destroy
+      end
+
     end
   end
 end
