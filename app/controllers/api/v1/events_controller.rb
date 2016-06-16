@@ -7,8 +7,6 @@ module Api
       end
 
       def create
-        binding.pry
-        presenter = Presenter.find_by(name: event_params[:presenter_name])
         event = Event.create(event_params)
         render json: event
       end
@@ -23,7 +21,6 @@ module Api
       def event_params
         params.require(:data).require(:attributes).permit(:name, :date, :price, :description, :url, :image)
       end
-
     end
   end
 end
