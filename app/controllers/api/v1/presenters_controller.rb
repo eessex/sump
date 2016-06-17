@@ -12,9 +12,13 @@ module Api
       end
 
       def update
+        presenter = Presenter.find(params[:id])
+        presenter.update(presenter_params)
+        render json: presenter
       end
 
       def destroy
+        Presenter.find(params[:id]).destroy
       end
 
       private

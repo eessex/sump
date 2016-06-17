@@ -7,15 +7,18 @@ module Api
       end
 
       def create
-        binding.pry
-        event =  Event.create!(event_params)
+        event = Event.create!(event_params)
         render json: event
       end
 
       def update
+        event = Event.find(params[:id])
+        event.update(event_params)
+        render json: event
       end
 
       def destroy
+        Event.find(params[:id]).destroy
       end
 
       private
