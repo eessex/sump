@@ -4,6 +4,10 @@ Rails.application.routes.draw do
       resources :events
       resources :presenters
       resources :artists
+
+      resources :users
+      mount Knock::Engine => "/knock"
+
     end
   end
 end
