@@ -150,6 +150,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   figaro
+  json
   knock
   listen (~> 3.0.5)
   pg (~> 0.18)
