@@ -21,7 +21,7 @@ module Api
       def artist_params
         params.require(:data).require(:attributes).permit(:name)
       end
-
+      
     end
   end
 end
