@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   has_many :artists_events
   has_many :artists, through: :artists_events
 
-  before_save :set_upcoming, :sanitize_description
+  before_save :set_upcoming, :sanitize_inputs
 
   def set_upcoming
     if self.date
@@ -11,10 +11,14 @@ class Event < ApplicationRecord
     end
   end
 
-  def sanitize_description
+  def sanitize_inputs
     if self.description
       self.description = self.description.gsub("<br />", "")
-      self.description = self.description.gsub("&amp", "&")
+      self.description = self.description.gsub("&amp;", "&")
+    end
+    if self.name
+      self.name = self.name.gsub("<br />", "")
+      self.name = self.name.gsub("&amp;", "&")
     end
   end
 end
