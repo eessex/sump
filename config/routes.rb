@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
       resources :users
       mount Knock::Engine => "/knock"
-
+      get 'sign', controller: 'sign'
     end
   end
 end
