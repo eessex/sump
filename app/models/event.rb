@@ -10,4 +10,10 @@ class Event < ApplicationRecord
       self.date > DateTime.now ? self.upcoming = true : self.upcoming = false
     end
   end
+
+  def self.sanitize_descriptions
+    self.all.each do |event|
+      event.description.gsub("<br />", "")
+    end
+  end
 end
