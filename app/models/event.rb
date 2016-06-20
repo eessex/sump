@@ -3,17 +3,18 @@ class Event < ApplicationRecord
   has_many :artists_events
   has_many :artists, through: :artists_events
 
-  before_save :set_upcoming
+  before_save :set_upcoming, :sanitize_description
 
   def set_upcoming
-    unless self.date.nil?
+    if self.date
       self.date > DateTime.now ? self.upcoming = true : self.upcoming = false
     end
   end
 
-  def self.sanitize_descriptions
-    self.all.each do |event|
-      event.description.gsub("<br />", "")
+  def sanitize_description
+    if self.description
+      self.description = self.description.gsub("<br />", "")
+      self.description = self.description.gsub("&amp", "&")
     end
   end
 end
