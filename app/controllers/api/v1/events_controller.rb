@@ -1,6 +1,7 @@
 module Api
   module V1
     class EventsController < ApplicationController
+      before_action :authenticate, except: [:index]
 
       def index
         render json: Event.all, include: ['artists', 'presenter']

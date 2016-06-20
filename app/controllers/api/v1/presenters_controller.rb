@@ -1,6 +1,7 @@
 module Api
   module V1
     class PresentersController < ApplicationController
+      before_action :authenticate, except: [:index]
 
       def index
         render json: Presenter.all, include: ['events']
