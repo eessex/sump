@@ -17,12 +17,12 @@ ben = Artist.create(name: "Ben Owen")
 tristan = Artist.create(name: "Tristan Shepherd")
 carlo = Artist.create(name: "Carlo Costa")
 
-b20160621a = ArtistsEvent.create(artist: leila, event_id: e20160621)
-b20160621b = ArtistsEvent.create(artist: tamio, event: e20160621)
-b20160621c = ArtistsEvent.create(artist: aaron, event: e20160621)
-b20160621d = ArtistsEvent.create(artist: ben, event: e20160621)
-b20160621e = ArtistsEvent.create(artist: tristan, event: e20160621)
-b20160621f = ArtistsEvent.create(artist: carlo, event: e20160621)
+# b20160621a = ArtistsEvent.create(artist_id: leila.id, event_id: e20160621.id)
+# b20160621b = ArtistsEvent.create(artist: tamio, event: e20160621)
+# b20160621c = ArtistsEvent.create(artist: aaron, event: e20160621)
+# b20160621d = ArtistsEvent.create(artist: ben, event: e20160621)
+# b20160621e = ArtistsEvent.create(artist: tristan, event: e20160621)
+# b20160621f = ArtistsEvent.create(artist: carlo, event: e20160621)
 
 ###
 
