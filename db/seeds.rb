@@ -16,6 +16,16 @@ booking6 = ArtistsEvent.create(artist: dasaudit, event: e20151210)
 booking8 = ArtistsEvent.create(artist: sweettalk, event: e20151210)
 
 ####
+issue = Presenter.create(name: "ISSUE Project Room")
+spirituals = Artist.create(name: "Black Spirituals")
+
+e20150922 = Event.create(date: "2015-09-22 20:00:00", name: "Black Spirituals", url:"http://issueprojectroom.org/event/black-spirituals", image: "https://s3.amazonaws.com/sump/uploads/BlackSpirituals_byOttoOppiChristiansen2015_01.jpg", description: "ISSUE Project Room presents the New York debut of Oakland-based electro-acoustic unit Black Spirituals, in collaboration with new Ridgewood venue The Sump and Poppers Locarno bar. The duo consists of Zachary James Watkins (electronics) and Marshall Trammell (percussion), and borrows the alias Black Spirituals from a found cassette documenting a lecture given by Bernice Reagon on the roots music of American Black Slaves. At the ecstatic intersection of rich harmonic tones and the heart-thumping, acoustic percussion, Black Spirituals transform performance sites with ritualistic communication, and manipulate temporal experience with their non-linear 'Multi-Aesthetic Approach to Improvisation.'")
+booking0 = ArtistsEvent.create(artist: spirituals, event: e20150922)
+
+e20150922.presenter = issue
+e20150922.save
+
+###
 
 djshlucht = Artist.create(name: "DJ ShluchT")
 eve = Artist.create(name: "Eve Essex")
@@ -24,8 +34,7 @@ leabertucci = Artist.create(name: "Lea Bertucci")
 pedrolopes = Artist.create(name: "Pedro Lopes")
 vanessarossetto = Artist.create(name: "Vanessa Rossetto")
 
-e20151113 = Event.create(date: "2015-11-13 20:00:00", name: "Pedro Lopes, Greg Fox, Vanessa Rossetto, Lea Bertucci/Eve Essex/DJ ShluchT", description: "VANESSA ROSSETTO: aggressive electronic ambiance.<br />PEDRO LOPES: turntable percussion from Berlin<br />
-GREG FOX: percussus among us.<br />LEA BERTUCCI / EVE ESSEX / DJ Shlucht: Two saxes + tape collage, first time collab", image: "https://s3.amazonaws.com/sump/uploads/12187852_1153849964642464_3358641727911236759_n.jpg")
+e20151113 = Event.create(date: "2015-11-13 20:00:00", name: "Pedro Lopes, Greg Fox, Vanessa Rossetto, Lea Bertucci/Eve Essex/DJ ShluchT", description: "VANESSA ROSSETTO: aggressive electronic ambiance. PEDRO LOPES: turntable percussion from Berlin. GREG FOX: percussus among us. LEA BERTUCCI / EVE ESSEX / DJ Shlucht: Two saxes + tape collage, first time collab", image: "https://s3.amazonaws.com/sump/uploads/12187852_1153849964642464_3358641727911236759_n.jpg")
 
 booking7 = ArtistsEvent.create(artist: djshlucht, event: e20151113)
 booking9 = ArtistsEvent.create(artist: eve, event: e20151113)
