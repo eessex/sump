@@ -47,7 +47,7 @@ booking6 = ArtistsEvent.create(artist: dasaudit, event: e20151210)
 booking8 = ArtistsEvent.create(artist: sweettalk, event: e20151210)
 
 ####
-issue = Presenter.create(name: "ISSUE Project Room")
+issue = Presenter.create(name: "ISSUE Project Room", url: "http://issueprojectroom.org", description: "ISSUE Project Room is a pioneering Brooklyn-based performance nonprofit founded in 2003. ISSUE presents projects by interdisciplinary artists that expand the boundaries of artistic practice and stimulate critical dialogue in the broader community. ISSUE serves as a leading cultural incubator, facilitating the commission and premiere of innovative new works spanning genres of music, dance, literature and film.", image: "https://s3.amazonaws.com/sump/uploads/issue.jpg")
 spirituals = Artist.create(name: "Black Spirituals")
 
 e20150922 = Event.create(date: "2015-09-22T20:00:00", name: "Black Spirituals", url:"http://issueprojectroom.org/event/black-spirituals", image: "https://s3.amazonaws.com/sump/uploads/BlackSpirituals_byOttoOppiChristiansen2015_01.jpg", description: "ISSUE Project Room presents the New York debut of Oakland-based electro-acoustic unit Black Spirituals, in collaboration with new Ridgewood venue The Sump and Poppers Locarno bar. The duo consists of Zachary James Watkins (electronics) and Marshall Trammell (percussion), and borrows the alias Black Spirituals from a found cassette documenting a lecture given by Bernice Reagon on the roots music of American Black Slaves. At the ecstatic intersection of rich harmonic tones and the heart-thumping, acoustic percussion, Black Spirituals transform performance sites with ritualistic communication, and manipulate temporal experience with their non-linear 'Multi-Aesthetic Approach to Improvisation.'")
@@ -57,6 +57,31 @@ e20150922.presenter = issue
 e20150922.save
 
 ###
+daniel = Presenter.create(name: "CT::SWaM", url: "http://ctswam.org/", description: "CT::SWaM [Contemporary Temporary Sound Works and Music] is an artist-run series that has been presenting performances, installations and workshops in spaces such as Eyebeam’s former Chelsea location, Fridman Gallery, and The Knockdown Center in NYC, as well as Neu West Berlin in Berlin. The series, initiated by Daniel Neumann in 2012, focuses on spatial sound works, where the distribution and localization of sounds is a primary compositional parameter and a central feature for the listener. These works consider architectural, acoustical and technological factors in exploring the complex and dynamic relationship between sound and space. The formats are open and include contemporary sound experiments, electro-acoustic multi-channel composition, improvisation, non-traditional performance configurations, lowercase artistic presence, and workshops – all of which diverge from a fixed perspective on audible space.")
+
+e20160522 = Event.create(date: "2016-05-22T19:00:00", url: "https://www.facebook.com/events/241302709578278/", image: "https://s3.amazonaws.com/sump/uploads/13266075_668984023254237_2679777016319217280_n.jpg", name: "leerraum feat. Colliding Fields: Richard Garet, Zimoun, + more", description: "CT::SWaM presents a selected program of multi-channel releases and live performances from the Swiss-based label [ ] leerraum. 7pm doors and playback pieces, 8:30pm live sets")
+
+e20160522.presenter = daniel
+e20160522.save
+
+colliding = Artist.create(name: "Colliding Fields")
+garet = Artist.create(name: "Richard Garet")
+zimoun = Artist.create(name: "Zimoun")
+kako = Artist.create(name: "Yuzo Kako")
+janiv = Artist.create(name: "Janiv Oron")
+incise = Artist.create(name: "D’Incise")
+merino = Artist.create(name: "Elías Merino")
+
+be20160522a = ArtistsEvent.create(artist: colliding, event: e20160522)
+be20160522b = ArtistsEvent.create(artist: garet, event: e20160522)
+be20160522c = ArtistsEvent.create(artist: zimoun, event: e20160522)
+be20160522d = ArtistsEvent.create(artist: kako, event: e20160522)
+be20160522e = ArtistsEvent.create(artist: janiv, event: e20160522)
+be20160522f = ArtistsEvent.create(artist: incise, event: e20160522)
+be20160522g = ArtistsEvent.create(artist: merino, event: e20160522)
+
+###
+
 
 djshlucht = Artist.create(name: "DJ ShluchT")
 gregfox = Artist.create(name: "Greg Fox")
@@ -126,8 +151,9 @@ artist5 = Artist.create(name: "Synthetic Love Dream")
 artist6 = Artist.create(name: "Systematic Distortion")
 
 
-event1 = Event.create(name: "Work 04", date: "2016-07-10T20:00:00")
-event2 = Event.create(name: "Work 05", date: "2016-12-10T20:00:00")
+event1 = Event.create(name: "Work 04: Synthetic Love Dream, David First + Jeanann Dara + Ka Baird, Systematic Distortion", url: "https://www.facebook.com/events/225525314496048/", date: "2016-05-24T20:00:00", description: "SYNTHETIC LOVE DREAM Max Zuckerman, Guitar ; David Lackner, Sax; Adrian Knight, Synth. Drawing from Jazz, Minimalism and Blues, Synthetic Love Dream explores long forms and tuning systems. DAVID FIRST w/ very special guests Jeanann Dara & Ka Baird will magnify a minute of notes and gestures into a set's worth of sound in order to best examine the air for missing keys. David First, Vong Co guitar, harmonica, transistor radio, theremin; Jeanann Dara, viola; Ka Baird, harmonium, voice. The NYC based SYSTEMATIC DISTORTION Orchestra was put together by French-Japanese violist Frantz Loriot. The orchestra features some of the most adventures and daring musicians from the New York downtown scene. Improvising all together is one of the goal. The music of the SDO drifts and scurries between different chapters, intensities and episodes. This ensemble manages, somehow, to be overwhelming and intimate simultaneously, as though they are playing for the whole world individually. FRANTZ LORIOT viola, JOE MOFFETT trumpet, NATHANIEL MORGAN alto sax, JONATHAN MORITZ tenor sax, BERN GERSTEIN trombone, SAM KULIK bass trombone, Sean Ali double bass, LEILA BORDREUIL cello, JOANNA MATTREY viola, CARLO COSTA percussions, DEVIN GRAY percussions & FLIN VAN HEMMEN percussions")
+
+event2 = Event.create(name: "Work 05: Chris McIntyre, Ikue Mori, Ed Bear", url: "https://www.facebook.com/events/631575076999961/", date: "2016-05-31T20:00:00", description: "CHRIS MCINTYRE presents works for trombone and electronics. He leads a varied career in music as a performer, composer, and curator/producer. His projects include leading TILT Brass (Director), UllU (duo w/ David Shively), Either/Or Ensemble, and Ne(x)tworks. His trombone skills have been utilized in composer-led projects of Anthony Braxton, Zeena Parkins, John King, R. Luke DuBois, David First, Elliott Sharp, and Anthony Coleman. He has recorded for Tzadik, New World, POTTR, Non-Site and Mode. Curatorial work includes projects at The Kitchen, Guggenheim Museum, Issue Project Room, and The Stone, and Artistic Director of the MATA Festival (2007-10). IKUE MORI will perfrom in duet with DAVID WATSON. Since her work drumming with DNA in the early '80's she has consistently been a creative force in new music. In the last months she has worked with John Zorn, Jim Staley, Makigami Koichi, Satoko Fujii, Ned Rothenberg, Natsuki Tamura, Jim Black, Sylvie Couvoisier, Okkyung Lee, Susie Ibarra, Lotte Anker, Zeena Parkins, Erik Friedlander, Cyro Baptista, Anthony Coleman, Craig Taborn, Ches Smith, Vijay Iyer, Wadada Leo Smith to name but a few. She hasn't worked with David Watson in 20 years, so expect the unexpected. ED BEAR is an American performing artist and engineer. His work with robotics, sound, video, radio transmission and collective improvisation investigates the questionable calibration of perception and capital. As an educator and designer committed to an open source world, he researches and practices material reuse and as a civil responsibility.")
 
 booking1 = ArtistsEvent.create(artist: artist1, event: event2)
 booking2 = ArtistsEvent.create(artist: ikuemori, event: event2)
