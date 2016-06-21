@@ -28,14 +28,14 @@ ActiveRecord::Schema.define(version: 20160620174011) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "date"
-    t.integer  "price"
-    t.string   "description"
-    t.string   "image"
-    t.integer  "presenter_id"
-    t.string   "url"
-    t.boolean  "upcoming"
+    t.string  "name"
+    t.string  "date"
+    t.integer "price"
+    t.string  "description"
+    t.string  "image"
+    t.integer "presenter_id"
+    t.string  "url"
+    t.boolean "upcoming"
     t.index ["presenter_id"], name: "index_events_on_presenter_id", using: :btree
   end
 
