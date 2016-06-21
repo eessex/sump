@@ -17,7 +17,7 @@ ben = Artist.create(name: "Ben Owen")
 tristan = Artist.create(name: "Tristan Shepherd")
 carlo = Artist.create(name: "Carlo Costa")
 
-b20160621a = ArtistsEvent.create(artist: leila, event: e20160621)
+b20160621a = ArtistsEvent.create(artist: leila, event_id: e20160621)
 b20160621b = ArtistsEvent.create(artist: tamio, event: e20160621)
 b20160621c = ArtistsEvent.create(artist: aaron, event: e20160621)
 b20160621d = ArtistsEvent.create(artist: ben, event: e20160621)
@@ -160,6 +160,7 @@ booking2 = ArtistsEvent.create(artist: ikuemori, event: event2)
 booking3 = ArtistsEvent.create(artist: artist3, event: event2)
 booking4 = ArtistsEvent.create(artist: artist4, event: event1)
 booking5 = ArtistsEvent.create(artist: artist5, event: event1)
+booking6 = ArtistsEvent.create(artist: artist6, event: event1)
 
 event1.presenter = lockit
 event2.presenter = lockit
