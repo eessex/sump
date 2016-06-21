@@ -9,6 +9,10 @@ class Event < ApplicationRecord
     if self.date
       self.date > DateTime.now ? self.upcoming = true : self.upcoming = false
     end
+
+    if self.date
+      self.date.to_datetime > DateTime.now ? self.status = 'upcoming' : self.status = 'past'
+    end
   end
 
   def sanitize_inputs
