@@ -5,6 +5,8 @@ class Event < ApplicationRecord
 
   before_save :set_upcoming, :sanitize_inputs
 
+  #default_scope { order('date DESC') } 
+
   def set_upcoming
     if self.date
       self.date > DateTime.now ? self.upcoming = true : self.upcoming = false
