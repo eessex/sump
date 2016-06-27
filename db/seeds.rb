@@ -33,7 +33,7 @@ b20160621f = ArtistsEvent.create(artist: carlo, event: e20160621)
 
 ###
 
-e20160622 = Event.create(date: "2016-06-22T20:00:00", name: "Ross Chait, Bob Bellerue, Mysterious House, Eve Essex", url: "https://www.facebook.com/events/1628594964128501/", image: "https://s3.amazonaws.com/sump/uploads/13418810_960895524009409_2286252050821769589_n.jpg", presenter: sump)
+e20160622 = Event.create(date: "2016-06-22T20:00:00", url: "https://www.facebook.com/events/1628594964128501/", name: "Ross Chait, Bob Bellerue, Mysterious House, Eve Essex", image: "https://s3.amazonaws.com/sump/uploads/13418810_960895524009409_2286252050821769589_n.jpg", presenter: sump)
 ross = Artist.create(name: "Ross Chait")
 bob = Artist.create(name: "Bob Bellerue")
 james = Artist.create(name: "Mysterious House")
@@ -125,6 +125,14 @@ booking18 = ArtistsEvent.create(artist: tomhamilton, event: e20160315)
 
 ###
 e20160211 = Event.create(name: "Leila Bourdriel &amp; Michael Foster, Jake Becker, Bentley Anderson, DJ Matthew Walker", date: "2016-03-10T20:00:00", image: "https://s3.amazonaws.com/sump/uploads/20160211-Sump-BourdrielFosterBeckerAnderson-Letter.jpg", presenter: sump)
+mikefoster = Artist.create(name: "Michael Foster")
+jakebecker = Artist.create(name: "Jake Becker")
+bentley = Artist.create(name: "Bentley Anderson")
+
+booking23 = ArtistsEvent.create(artist: leila, event: e20160211)
+booking24 = ArtistsEvent.create(artist: mikefoster, event: e20160211)
+booking25 = ArtistsEvent.create(artist: jakebecker, event: e20160211)
+booking26 = ArtistsEvent.create(artist: bentley, event: e20160211)
 
 
 e20160317 = Event.create(date: "2016-03-17T21:00:00", name: "Live Presence: Sunatirene, Lonely Boys, Alex Schmidt, DJ Simpson", presenter: intraphenom, description: "INTRA PHENOM is an ongoing New York-based performance series organized by Kayla Guthrie, highlighting female-identified artists in live genres including reading, movement, sound and song. SUNATIRENE, aka Sydney Spann, is a Baltimore based musician and performance artist whose solo project exists under the moniker Sunatirene (sún- ah-chur-ráin). Drawing from musique concrete, folk music, and pop tendencies, she uses field recordings, archival samples, generative processes, and her voice as soundscaping and storytelling tools. She translates visual symbols into aural forms and focuses on the healing and architectural potential of sound in an attempt to create new, genre-less music. Her first release is available via Ehse Records. LONELY BOYS are Daphne Ahlers and Rosa Rendl. They are based between Berlin and Vienna. ALEX SCHMIDT is an artist, teacher and performer who lives and works in New York City. She will perform at this installment of INTRA PHENOM LIVE PRESENCE as Trude Donovan (age 44), a former libels and damages attorney turned young adult novelist. Donovan's trilogy The Book of Odin tells the story of Rasmus, an asexual teen living in dystopic coastal Norway. This much anticipated reading commemorates the third installment of The Book of Odin, set to release with Hudson News Booksellers this fall. Donovan will reserve time after the reading to answer audience questions; however, video recording is strictly prohibited. Please arrive early as seating is limited.", image: "https://s3.amazonaws.com/sump/uploads/IntraPhenom032016.jpg")

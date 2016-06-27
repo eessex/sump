@@ -4,7 +4,7 @@ module Api
       before_action :authenticate, except: [:index]
 
       def index
-        render json: Artist.all, include: ['events']
+        render json: Artist.all.order(name: :asc), include: ['events']
       end
 
       def create
