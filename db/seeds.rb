@@ -167,6 +167,18 @@ booking22 = ArtistsEvent.create(artist: alexschmidt, event: e20160317)
 
 ###
 
+e20151014 = Event.create(date: "2015-10-14T21:00:00", name: "Cammisa, Elle Erdman, Charity Coleman", presenter: intraphenom, price: "5", image: "https://s3.amazonaws.com/sump/uploads/12108309_10153013878051249_628432191069624894_n.jpg", description: "Join us for a night of reading, performance and sound. Cammisa performs new music.  Dancer Elle Erdman performs with music by bassist Ashley Math (VBA). Artist and author Charity Coleman shares poetry and stories.", url: "https://www.facebook.com/events/1136038473090109")
+
+cammisa = Artist.create(name: "Cammisa Buerhaus")
+elle = Artist.create(name: "Elle Erdman")
+charity = Artist.create(name: "Charity Coleman")
+
+e20151014a = ArtistsEvent.create(artist: cammisa, event: e20151014)
+e20151014b = ArtistsEvent.create(artist: elle, event: e20151014)
+e20151014c = ArtistsEvent.create(artist: charity, event: e20151014)
+
+###
+
 artist1 = Artist.create(name: "Chris McIntyre")
 artist3 = Artist.create(name: "Ed Bear")
 artist4 = Artist.create(name: "David First")
