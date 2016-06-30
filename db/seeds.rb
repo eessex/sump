@@ -11,10 +11,28 @@ daniel = Presenter.create(name: "CT::SWaM", url: "http://ctswam.org/", descripti
 issue = Presenter.create(name: "ISSUE Project Room", url: "http://issueprojectroom.org", description: "ISSUE Project Room is a pioneering Brooklyn-based performance nonprofit founded in 2003. ISSUE presents projects by interdisciplinary artists that expand the boundaries of artistic practice and stimulate critical dialogue in the broader community. ISSUE serves as a leading cultural incubator, facilitating the commission and premiere of innovative new works spanning genres of music, dance, literature and film.", image: "https://s3.amazonaws.com/sump/uploads/issue.jpg")
 intraphenom = Presenter.create(name: "Intra Phenom", url: "https://www.facebook.com/intraphenom/", description: "Intra Phenom is a New York-based performance series highlighting women in live genres, including reading, movement, sound and song.")
 sump = Presenter.create(name: "the Sump", description: "The Sump is an artist-run performance space adjacent to poppers locarno bar in Ridgewood, Queens.")
-
+eternal = Presenter.create(name: "Internal/Eternal", description: "Organized by Tom Carter and Rachel Orosco, Internal/Eternal is a series celebrating personal (and often singular) visions liberated from conventional musical genre boundaries.")
 
 bieber = User.create(first_name: "Justin", last_name: "Bieber", email: "justin@bieber.com", password: "password")
+
 ###
+
+e20160614 = Event.create(date: "2016-06-14T20:00:00", presenter: eternal, name: "Susan Alcorn, Victoria Keddie, Suzanne Langille + Yuko Otomo + Laura Ortman", url: "https://www.facebook.com/events/268970890159012", image: "https://s3.amazonaws.com/sump/uploads/INTERNAL2.jpeg", description: "The second edition of Internal/Eternal features a first-time word/voice/sound collab between Suzanne Langille, Laura Ortman, and Yuko Otomo, a solo performance by Victoria Keddie (the exact nature of which remains mysterious), and a rare NYC solo performance by steel guitar legend and old friend Susan Alcorn.")
+
+suzanne = Artist.create(name: "Suzanne Langille")
+yuko = Artist.create(name: "Yuko Otomo")
+laura_o = Artist.create(name: "Laura Ortman")
+victoria = Artist.create(name: "Victoria Keddie")
+susan_a = Artist.create(name: "Susan Alcorn")
+
+e20160614a = ArtistsEvent.create(artist: suzanne, event: e20160614)
+e20160614b = ArtistsEvent.create(artist: yuko, event: e20160614)
+e20160614c = ArtistsEvent.create(artist: laura_o, event: e20160614)
+e20160614d = ArtistsEvent.create(artist: victoria, event: e20160614)
+e20160614e = ArtistsEvent.create(artist: susan_a, event: e20160614)
+
+###
+
 e20160621 = Event.create(date: "2016-06-21T20:00:00", presenter: sump, name: "Tamio Shiraishi + Leila Bordreuil, Aaron Zarzutzki + Ben Owen, Tristan Shepherd + Carlo Costa", price: "8", url: "https://www.facebook.com/events/966697236761412/", image: "https://s3.amazonaws.com/sump/uploads/13497754_10206204031599035_5813798871478576158_o.jpg")
 
 leila = Artist.create(name: "Leila Bordreuil")
@@ -24,7 +42,7 @@ ben = Artist.create(name: "Ben Owen")
 tristan = Artist.create(name: "Tristan Shepherd")
 carlo = Artist.create(name: "Carlo Costa")
 
-b20160621a = ArtistsEvent.create(artist_id: leila.id, event_id: e20160621.id)
+b20160621a = ArtistsEvent.create(artist: leila, event: e20160621)
 b20160621b = ArtistsEvent.create(artist: tamio, event: e20160621)
 b20160621c = ArtistsEvent.create(artist: aaron, event: e20160621)
 b20160621d = ArtistsEvent.create(artist: ben, event: e20160621)
