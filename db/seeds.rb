@@ -15,6 +15,22 @@ eternal = Presenter.create(name: "Internal/Eternal", description: "Organized by 
 
 bieber = User.create(first_name: "Justin", last_name: "Bieber", email: "justin@bieber.com", password: "password")
 
+
+e20160714 = Event.create(date:"2016-07-14T20:00", presenter: lockit, name: "Work: 07: Bill Nace, Samara Lubelski, David Watson, Ryan Sawyer, Ian Douglas-Moore", url: "https://www.facebook.com/events/275266609499404/", description:"Celebrating a rare visit by superb guitarist Bill Nace to our city, perhaps currently best known for his work as Bodyhead, with Kim Gordon.\nWith multi-instrumentalist Samara Lubelski, best known for her solo records and core contributions to minor legends Hall of Fame & Tower Recordings, projects that capitalized on her knack for marrying song forms and abstraction. Also, David Watson.\n Just added- Ryan Sawyer solo percussion.\n And new-ish to our city, from Berlin Ian Douglas-Moore.")
+###
+
+bill = Artist.create(name: "Bill Nace")
+samara = Artist.create(name: "Samara Lubelski")
+watson = Artist.create(name: "David Watson")
+sawyer = Artist.create(name: "Ryan Sawyer")
+ian_dg = Artist.create(name: "Ian Douglas-Moore")
+
+e20160714a = ArtistsEvent.create(artist: bill, event: e20160714)
+e20160714b = ArtistsEvent.create(artist: samara, event: e20160714)
+e20160714c = ArtistsEvent.create(artist: watson, event: e20160714)
+e20160714d = ArtistsEvent.create(artist: sawyer, event: e20160714)
+e20160714e = ArtistsEvent.create(artist: ian_dg, event: e20160714)
+
 ###
 
 e20160614 = Event.create(date: "2016-06-14T20:00:00", presenter: eternal, name: "Susan Alcorn, Victoria Keddie, Suzanne Langille + Yuko Otomo + Laura Ortman", url: "https://www.facebook.com/events/268970890159012", image: "https://s3.amazonaws.com/sump/uploads/INTERNAL2.jpeg", description: "The second edition of Internal/Eternal features a first-time word/voice/sound collab between Suzanne Langille, Laura Ortman, and Yuko Otomo, a solo performance by Victoria Keddie (the exact nature of which remains mysterious), and a rare NYC solo performance by steel guitar legend and old friend Susan Alcorn.")
@@ -196,3 +212,4 @@ booking3 = ArtistsEvent.create(artist: artist3, event: event2)
 booking4 = ArtistsEvent.create(artist: artist4, event: event1)
 booking5 = ArtistsEvent.create(artist: artist5, event: event1)
 booking6 = ArtistsEvent.create(artist: artist6, event: event1)
+booking017 = ArtistsEvent.create(artist: watson, event: e20160714)
