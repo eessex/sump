@@ -15,6 +15,17 @@ eternal = Presenter.create(name: "Internal/Eternal", description: "Organized by 
 
 bieber = User.create(first_name: "Justin", last_name: "Bieber", email: "justin@bieber.com", password: "password")
 
+e20160819 = Event.create(date:"2016-08-19T20:00", presenter: sump, name: "Raúl De Nieves, Baby Perrier, BABI AUDI, Kayla Guthrie", url: "https://www.facebook.com/events/127406724361300/", image: "https://s3.amazonaws.com/sump/uploads/20160819-Kayla.jpg")
+
+raul = Artist.create(name: "Raúl De Nieves")
+perrier = Artist.create(name: "Baby Perrier")
+audi = Artist.create(name: "BABI AUDI")
+kayla  = Artist.create(name: "Kayla Guthrie")
+
+e20160819a = ArtistsEvent.create(artist: raul, event: e20160819)
+e20160819b = ArtistsEvent.create(artist: perrier, event: e20160819)
+e20160819c = ArtistsEvent.create(artist: audi, event: e20160819)
+e20160819d = ArtistsEvent.create(artist: kayla, event: e20160819)
 
 e20160714 = Event.create(date:"2016-07-14T20:00", presenter: lockit, name: "Work: 07: Bill Nace, Samara Lubelski, David Watson, Ryan Sawyer, Ian Douglas-Moore", url: "https://www.facebook.com/events/275266609499404/", description:"Celebrating a rare visit by superb guitarist Bill Nace to our city, perhaps currently best known for his work as Bodyhead, with Kim Gordon.\nWith multi-instrumentalist Samara Lubelski, best known for her solo records and core contributions to minor legends Hall of Fame & Tower Recordings, projects that capitalized on her knack for marrying song forms and abstraction. Also, David Watson.\n Just added- Ryan Sawyer solo percussion.\n And new-ish to our city, from Berlin Ian Douglas-Moore.")
 ###
